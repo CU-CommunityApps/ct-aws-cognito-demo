@@ -320,3 +320,8 @@ Resources:
           FromPort: '80'
           ToPort: '80'
           CidrIp: 0.0.0.0/0
+          
+Outputs:
+  ALBDNSName:
+    Description: DNS name of the ALB
+    Value: !GetAtt DemoALB.DNSName
