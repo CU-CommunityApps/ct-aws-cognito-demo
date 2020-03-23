@@ -1,0 +1,39 @@
+[
+    {
+        "DefaultValue": "t3.nano", 
+        "Description": "WebServer EC2 instance type", 
+        "ParameterKey": "InstanceTypeParam",
+        "ParameterValue": null
+    }, 
+    {
+        "Description": "List of public subnets on which to deploy the ALB", 
+        "ParameterKey": "PublicSubnetsParam",
+        "ParameterValue": null
+    }, 
+    {
+        "DefaultValue": "0.0.0.0/0", 
+        "Description": "The IP address range (CIDR block) that can be used to SSH to the EC2 instances", 
+        "ParameterKey": "SSHLocation",
+        "ParameterValue": null
+    }, 
+    {
+        "Description": "VPC in which to deploy the ALB", 
+        "ParameterKey": "VPCParam",
+        "ParameterValue": null
+    }, 
+    {
+        "Description": "Fully qualified domain name that you will point to the ALB (e.g., demo.cs.cucloud.net )", 
+        "ParameterKey": "ServiceFQDNParam",
+        "ParameterValue": null
+    }, 
+    {
+        "Description": "Name of an existing EC2 KeyPair to enable SSH access to the instance", 
+        "ParameterKey": "KeyNameParam",
+        "ParameterValue": null
+    }, 
+    {
+        "Description": "ARN of ACM certificate for ServiceFQDNParam", 
+        "ParameterKey": "ACMCertificateParam",
+        "ParameterValue": null
+    }
+  ]
