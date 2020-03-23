@@ -1,0 +1,38 @@
+[
+    {
+        "ParameterKey": "AzureAppRegistrationClientIDParam",
+        "ParameterValue": "45ef022f-2227-4843-9e63-10d15387abfb"
+    }, 
+    {
+        "ParameterKey": "InstanceTypeParam",
+        "ParameterValue": "t3.nano"
+    }, 
+    {
+        "ParameterKey": "PublicSubnetsParam",
+        "ParameterValue": "subnet-8d95c4fa,subnet-8e618aa4"
+    }, 
+    {
+        "ParameterKey": "SSHLocation",
+        "ParameterValue": "0.0.0.0/0"
+    }, 
+    {
+        "ParameterKey": "VPCParam",
+        "ParameterValue": "vpc-71070114"
+    }, 
+    {
+        "ParameterKey": "AzureAppRegistrationClientSecretParam",
+        "ParameterValue": "R/57m2uo]5eQ/_[1p[OqhqTwH7N44N?T"
+    }, 
+    {
+        "ParameterKey": "ServiceFQDNParam",
+        "ParameterValue": "demo.cs.cucloud.net"
+    }, 
+    {
+        "ParameterKey": "KeyNameParam",
+        "ParameterValue": "pea1"
+    }, 
+    {
+        "ParameterKey": "ACMCertificateParam",
+        "ParameterValue": "arn:aws:acm:us-east-1:225162606092:certificate/9d434082-50a4-4553-a34a-91d2386db7e8"
+    }
+  ]
