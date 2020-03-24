@@ -8,7 +8,7 @@ export PARMS_FILE=${PARMS_FILE:-"parameters.template.json"}
 
 ./validate-template.sh
 
-aws cloudformation create-stack \
-  --template-body file://azure-oidc-cognito-demo.yml \
+aws cloudformation update-stack \
+  --template-body file://saml-cognito-demo.yml \
   --parameters file://$PARMS_FILE \
-  --stack-name demo-azure-oidc-cognito
+  --stack-name saml-cognito-demo

@@ -4,9 +4,11 @@
 #
 set -e
 
-aws cloudformation validate-template --template-body file://azure-oidc-cognito-demo.yml
+export PARMS_FILE=${PARMS_FILE:-"parameters.template.json"} 
+
+./validate-template.sh
 
 aws cloudformation update-stack \
   --template-body file://azure-oidc-cognito-demo.yml \
-  --parameters file://parameters.cu-cs-sandbox.json \
+  --parameters file://$PARMS_FILE \
   --stack-name demo-azure-oidc-cognito
