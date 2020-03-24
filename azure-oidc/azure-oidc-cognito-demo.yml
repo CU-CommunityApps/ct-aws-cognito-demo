@@ -89,18 +89,14 @@ Resources:
       # MfaConfiguration: String
       # Policies: 
       #   Policies
-      # Schema:
-      #   - Name: email
-      #     AttributeDataType: String
-      #     Mutable: true
-      #     Required: true
-      #   - Name: netid
-      #     AttributeDataType: String
-      #     Mutable: true
-      #     Required: false
-      #     StringAttributeConstraints:
-      #       MaxLength: 256
-      #       MinLength: 1          
+      Schema:
+        - Name: onprem_sid
+          AttributeDataType: String
+          Mutable: true
+          Required: false
+          StringAttributeConstraints:
+            MaxLength: 256
+            MinLength: 1          
       # SmsAuthenticationMessage: String
       # SmsConfiguration: 
       #   SmsConfiguration
@@ -129,7 +125,7 @@ Resources:
         username: sub
         preferred_username: upn
         email: email
-        profile: onprem_sid
+        "custom:onprem_sid": onprem_sid
       # IdpIdentifiers: 
       #   - String
       ProviderDetails: 
