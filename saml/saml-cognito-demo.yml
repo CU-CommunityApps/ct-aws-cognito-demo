@@ -104,7 +104,7 @@ Resources:
       #   VerificationMessageTemplate
 
   DemoUserPoolDomain:
-    Type: 'AWS::Cognito::UserPoolDomain'
+    Type: AWS::Cognito::UserPoolDomain
     Properties:
       Domain: !Sub "demo-saml-${VPCParam}"
       UserPoolId: !Ref DemoUserPool
@@ -303,6 +303,19 @@ Resources:
           CidrIp: 0.0.0.0/0
           
 Outputs:
+
   ALBDNSName:
     Description: DNS name of the ALB
     Value: !GetAtt DemoALB.DNSName
+
+  SAMLEntityID:
+    Description: Entity ID of SAML Service Provider
+    Value: !Sub "urn:amazon:cognito:sp:${DemoUserPool}"
+    
+  AssertionConsumerServiceURL:
+    Description: URL for the SAML AssertionConsumerServiceURL
+    Value: !Sub "https://${DemoUserPoolDomain}.auth.${AWS::Region}.amazoncognito.com/saml2/idpresponse" 
+
+  SigningCertCommand:
+    Description: AWS CLI command for getting signing certificate Cognito is using
+    Value: !Sub "aws cognito-idp get-signing-certificate --user-pool-id ${DemoUserPool} --query Certificate --output text > cert.pub"
