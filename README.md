@@ -1,4 +1,4 @@
-# ct-aws-cignito-demo
+# ct-aws-cognito-demo
 
 This repo contains demos of AWS Application Load Balancer configuration using Cognito for authentication. Specifically, using Cornell Azure AD (ADFS/OIDC) and Cornell Shibboleth as identity providers. See:
 - [Using AWS Cognito at Cornell](https://confluence.cornell.edu/x/MBzEFg)
